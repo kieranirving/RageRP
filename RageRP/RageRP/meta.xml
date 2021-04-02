@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<meta>
+  <info name="RageRP.Server" author="Kieran" type="gamemode" />
+
+  <script src="netcoreapp2.2/RageRP.Server.dll" />
+
+  <settings>
+    <setting name="isDebug" value="true" />
+    <setting name="version" value="RageRP Dev Build" />
+    <setting name="startCash" value="1000" />
+    <setting name="startBank" value="10000" />
+    <setting name="WebsiteURL" value="ForumNameHere" />
+  </settings>
+</meta>

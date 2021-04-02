@@ -1,0 +1,5 @@
+\bin\
+\obj\
+exclude_copy.txt
+RageRP.Client.DLCPacks.csproj
+RageRP.Client.DLCPacks.csproj.user

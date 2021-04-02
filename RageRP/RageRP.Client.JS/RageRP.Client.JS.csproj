@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="chat\" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="del &quot;C:\RAGEMP\server-files\client_packages\chat\*&quot; /Q&#xD;&#xA;xcopy &quot;$(ProjectDir)*&quot; &quot;C:\RAGEMP\server-files\client_packages\&quot; /Y /I /E /EXCLUDE:$(ProjectDir)exclude_copy.txt" />
+  </Target>
+
+</Project>

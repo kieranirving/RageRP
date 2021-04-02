@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(ProjectDir)*&quot; &quot;C:\RAGEMP\server-files\source_dlcpacks&quot; /Y /I /E /D /EXCLUDE:$(ProjectDir)exclude_copy.txt" />
+  </Target>
+
+</Project>

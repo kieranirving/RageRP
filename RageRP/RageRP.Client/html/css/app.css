@@ -1,0 +1,1294 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #00000001 !important;
+    /*background-image: url('/img/ingame.jpg');*/
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+body.noBack {
+    background-color: transparent !important;
+}
+
+.font {
+    font-family: 'Quicksand', sans-serif !important;
+}
+.font .tooltip {
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.verticalHorizontal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #00000057;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 1s;
+}
+.verticalHorizontal.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.startup .loading {
+}
+    .startup .loading > .animation.show,
+    .startup .loading > .text.show {
+        opacity: 1;
+    }
+    .startup .loading > .animation {
+        width: 100%;
+        text-align: center;
+        display: block;
+        position: relative;
+        margin-bottom: 10px;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    .startup .loading > .text {
+        width: 100%;
+        color: #fff;
+        opacity: 0;
+        transition: opacity 1s, top 1s;
+        top: 0px;
+    }
+    .startup .loading > .text.out {
+        top: -20px;
+        opacity: 0 !important;
+    }
+
+.charSelection .loading { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 100vh;
+    position: relative;
+    transition: left 1s;
+    float: left;
+    width: 100%;
+    left: 0px;
+}
+
+.characterSelection {
+    color: #fff;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 1s;
+    pointer-events: none;
+}
+.characterSelection.show {
+    opacity: 1;
+    pointer-events: all;
+}
+    .characterSelection .characterCard,
+    .characterSelection .addNew {
+        height: 300px;
+        border: 1px solid #fff;
+        margin-bottom: 30px;
+    }
+    .characterSelection .characterCard {
+        background-color: #020202b5 !important
+    }
+    .characterSelection .addNew {
+        border: none;
+        text-align: center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+        .characterSelection .addNew .icon {
+            font-size: 60px;
+            width: 100%;
+        }
+        .characterSelection .addNew .text {
+            width: 100%;
+            font-size: 20px;
+        }
+        .characterSelection .characterCard > .name {
+            width: 100%;
+            color: #000;
+            background-color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-weight: 800;
+        }
+            .characterSelection .characterCard > .delete {
+                position: relative;
+                top: -45px;
+                right: 5px;
+                float: right;
+                color: #000 !important;
+                cursor: pointer;
+            }
+        .characterSelection .characterCard > .stats {
+            padding: 10px;
+        }
+        .characterSelection .characterCard > .stats > .btn-success {
+            width: 100%;
+            position: relative;
+            top: 35px;
+            background-color: #42881e;
+            border-color: transparent !important;
+        }
+        .characterSelection .characterCard > .stats > .btn-success:hover {
+            background-color: #366f19 !important;
+        }
+
+.charCustom,
+.charCustom > .col-md-12 > .row {
+    height: 100vh !important;
+}
+    .charCustom .genderSelectWrap,
+    .charCustom .customiserWrap,
+    .charSelection .loading.hide {
+        opacity: 0;
+        left: -100%;
+        transition: opacity 1s, left 1s;
+        pointer-events: none;
+        position: absolute;
+        float: left;
+        width: 100%;
+    }
+    .charCustom .genderSelectWrap.active,
+    .charCustom .customiserWrap.active {
+        opacity: 1;
+        left: 0px;
+        pointer-events: all;
+    }
+    .charCustom .customiserWrap.active {
+        left: 15px !important;
+    }
+    .charCustom .title {
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+        padding-top: 20px;
+    }
+    .charCustom > .col-md-4 {
+        height: 100vh;
+        background-color: Red;
+    }
+        .charCustom .genderSelect {
+            padding-top: 20px;
+        }
+        .charCustom .genderSelect > .col-md-6 {
+            text-align: center;
+        }
+        .charCustom .genderSelect i {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            font-size: 50px;
+            border-radius: 100px;
+            border: 1px solid #fff;
+        }
+        .charCustom .genderSelect > .col-md-6 > i:hover {
+            background-color: #FFF;
+            color: #000;
+        }
+        .charCustom .genderSelect > .col-md-6.active > i {
+            background-color: #020202b5;
+            background-color: #FFF;
+            color: #000;
+        }
+    .charCustom .rotate {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        padding-right: 30px;
+        color: #fff;
+    }
+        .charCustom .rotate > label {
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        .charCustom .rotate:hover > label {
+            opacity: 1;
+        }
+    .charCustom .selection {
+        padding-top: 20px;
+    }
+        .charCustom .selection > .btn {
+            margin: 0 auto;
+        }
+
+.customiserWrap {
+
+}
+    .customiserWrap .row {
+        width: 100% !important;
+        height: fit-content !important;
+        margin: 0px !important;
+    }
+    .customiserWrap .row {
+        height: auto !important;
+    }
+        .customiserWrap .nav {
+            width: 100%;
+        }
+        .customiserWrap .nav > .nav-item {
+            width: 25%;
+            text-align: center;
+            border-radius: 0px !important;
+        }
+        .customiserWrap .nav > .nav-item > a {
+            border-radius: 0px;
+            color :#fff;
+            height: 100%;
+        }
+        .customiserWrap .nav > .nav-item > a.active {
+            color: #000;
+            background-color: #fff;
+        }
+
+    .customiserWrap > .parentSelect,
+    .customiserWrap > .customFace,
+    .customiserWrap > .customOther {
+        float: left;
+        position: absolute;
+        margin-top: 60px !important;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity .5s;
+    }
+    .customiserWrap > .parentSelect.active,
+    .customiserWrap > .customFace.active,
+    .customiserWrap > .customOther.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+    .customiserWrap > .customOther, 
+    .customiserWrap > .parentSelect {
+        margin-top: 80px !important;
+    }
+        .customiserWrap > .customFace > .content {
+            height: 100vh;
+            width: 100%;
+            padding: 20px;
+            padding-top: 20px;
+            padding-bottom: 80px;
+            overflow: scroll !important;
+        }
+            .customiserWrap > .customFace > .content > .faceItem {
+                margin-bottom: 10px;
+            }
+                .customiserWrap > .customFace > .content .faceItem input {
+                    z-index: 2476345783548 !important;
+                }
+                .customiserWrap > .customFace > .content .faceItem .btn {
+                    border: 1px solid #fff !important;
+                }
+    .customiserWrap .menuLabel {
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 13px;
+        height: fit-content;
+    }
+    .customiserWrap .menuLabel.middle {
+        width: 100%;
+        text-align: center;
+    }
+.slideInput {
+    width: 100%;
+    height: fit-content;
+    padding: 0px 20px;
+    margin-bottom: 40px !important;
+}
+    .slideInput > .choice {
+        width: 70%;
+        height: 30px;
+        line-height: 28px;
+        float: left;
+        text-align: center;
+    }
+    .slideInput > .back,
+    .slideInput > .forward {
+        float: left;
+        width: 15%;
+        text-align: center;
+    }
+    .slideInput > .back:hover,
+    .slideInput > .forward:hover {
+        background-color: #020202b7 !important;
+    }
+    .slideInput > .back:before {
+        font-family: "Font Awesome 5 Free"; font-weight: 900;
+        content: '\f104';
+    }
+    .slideInput > .forward:before {
+        font-family: "Font Awesome 5 Free"; font-weight: 900;
+        content: '\f105';
+    }
+#confirmModal {
+    text-align: center !important;
+}
+    #confirmModal > .modal-danger > .modal-content {
+        color: #721c24 !important;
+        background-color: #f8d7da !important;
+        border-color: #f5c6cb !important;
+    }
+    #confirmModal .modal-footer .btn {
+        width: 100% !important;
+    }
+
+
+.spawnSelector {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+    .spawnSelector .selector {
+        width: 100%;
+        text-align: center !important;
+        padding-bottom: 10px;
+    }
+    .spawnSelector .choices:last-child {
+        padding: 0px 10px;
+        padding-top: 5px;
+    }
+        .spawnSelector .choices .btnSpawn {
+            width: 100% !important;
+        }
+            .spawnSelector .selector > .row > .title {
+                width: 100%;
+                margin: 0 15px;
+                font-size: 20px;
+            }
+            .spawnSelector .selector > .choices .btnBack,
+            .spawnSelector .selector > .choices .btnForward {
+                color: #fff !important;
+            }
+            .spawnSelector .selector > .choices .btnBack:hover,
+            .spawnSelector .selector > .choices .btnForward:hover {
+                background-color: #020202b7 !important;
+            }
+
+#loginModal {
+    
+}
+    #loginModal .modal-header,
+    #loginModal .modal-content,
+    #loginMOdal .modal-footer {
+        border: none !important;
+    }
+    #loginModal .modal-header > .modal-title {
+        text-align: center !important;
+        width: 100%;
+    }
+    #loginModal .modal-content {
+        background-color: transparent !important;
+    }
+    #loginModal .modal-footer .btn {
+        width: 100%;
+    }
+.login .modal-backdrop.show {
+    opacity: .2 !important;
+}
+
+.phone {
+    width: 250px;
+    height: 500px;
+    position: absolute;
+    right: 20px;
+    bottom: -500px;
+    /* overflow: hidden; */
+    transition: bottom .5s ease 0s;
+}
+.phone.open {
+    bottom: 0px !important;
+}
+    .phone .row {
+        margin: 0px !important;
+    }
+    .phone > .buttons {
+        height: 100px;
+        width: 2px;
+        position: absolute;
+        right: -2px;
+        top: 40px;
+    }
+        .phone > .buttons > .volume > .up,
+        .phone > .buttons > .volume > .down,
+        .phone > .buttons > .lock {
+            background-color: #000;
+            height: 40px;
+            width: 2px;
+            margin-bottom: 5px;
+        }
+        .phone > .buttons > .lock {
+            margin-top: 30px;
+        }
+    .phone > .bevel {
+        background-color: #000000;
+        width: 100%;
+        height: 497px;
+        position: absolute;
+        padding: 7px 3px;
+        border-radius: 20px;
+
+    }
+        .phone > .bevel > .screen {
+            background-color: #888;
+            width: 244px;
+            height: 100%;
+            border-radius: 20px;
+            background-image: url(../img/phonebackground.jpg);
+            background-size: cover;
+            overflow: hidden;
+            z-index: 99;
+        }
+            .phone > .bevel > .screen > .notch {
+                background-color: #000;
+                width: 20px;
+                height: 14px;
+                margin: 0 auto;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                position: relative;
+                z-index: 12;
+                top: -1px !important;
+            }
+            .phone > .bevel > .screen > .notch > .circle {
+                background-color: #565656;
+                width: 10px;
+                height: 10px;
+                margin: 0 auto;
+                border-radius: 100px;
+            }
+            .phone > .bevel > .screen > .notificationBar.returnToCall {
+                background-color: green;
+                z-index: 11;
+            }
+            .phone > .bevel > .screen > .notificationBar.appOpen {
+                color: #000 !important;
+            }
+            .phone > .bevel > .screen > .notificationBar {
+                width: 100%;
+                margin-right: 50px;
+                position: relative;
+                float: left;
+                top: -14px;
+                font-size: 10px;
+                padding: 0px 20px;
+                color: #fff;
+                z-index: 11;
+            }
+                .phone > .bevel > .screen > .notificationBar > .return {
+                    float: left;
+                    display: none;
+                    font-size: 8px;
+                    line-height: 14px;
+                }
+                .phone > .bevel > .screen > .notificationBar.returnToCall > .return {
+                    float: left;
+                    display: table;
+                }
+                .phone > .bevel > .screen > .notificationBar > .network {
+                    float: left;
+                    display: table;
+                }
+                .phone > .bevel > .screen > .notificationBar.returnToCall > .network {
+                    display: none;
+                }
+                .phone > .bevel > .screen > .notificationBar > .time,
+                .phone > .bevel > .screen > .notificationBar > .battery {
+                    float: right;
+                }
+                .phone > .bevel > .screen > .notificationBar > .battery {
+                    padding-right: 5px;
+                    padding-left: 2px;
+                }
+
+            .phone > .bevel > .screen > .currentApp {
+                top: -44px !important;
+            }
+            .phone > .bevel > .screen > .currentApp,
+            .phone > .bevel > .screen > .callStatus {
+                width: 0px !important;
+                height: 0px !important;
+                -webkit-transition: width .5s, height .5s, opacity .5s, top .5s, left .5s;
+                transition: width .5s, height .5s, opacity .5s, top .5s, left .5s;
+                display:block;
+                background-color: #fff;
+                overflow: hidden;
+                opacity: 0;
+                top: 50%;
+                left: 50%;
+            }
+            .phone > .bevel > .screen > .callStatus {
+                background-color: #000;
+                color: #fff;
+                padding-top: 30px;
+            }
+            .phone > .bevel > .screen > .currentApp.open,
+            .phone > .bevel > .screen > .callStatus.open {
+                z-index: 10;
+                width: 100% !important;
+                height: 489px !important;
+                opacity: 1;
+                left: 0px;
+            }
+            .phone > .bevel > .screen > .currentApp,
+            .phone > .bevel > .screen > .apps,
+            .phone > .bevel > .screen > .callStatus {
+                width: 100%;
+                height: 490px;
+                top: -24px;
+                position: relative;
+            }
+                .phone > .bevel > .screen > .callStatus > .caller {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 22px;
+                } 
+                .phone > .bevel > .screen > .callStatus > .callerNumber {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 12px;
+                    margin-top: 5px;
+                    position: relative;
+                }
+                .phone > .bevel > .screen > .callStatus > .callTimer {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 8px;
+                    margin-top: 20px;
+                    position: relative;
+                }
+                .phone > .bevel > .screen > .callStatus > .callAction {
+                    width: 100%;
+                }
+                .phone > .bevel > .screen > .callStatus > .callAction > .row:not(.actions) > .col-md-6 {
+                    padding: 0px !important;
+                }
+                .phone > .bevel > .screen > .callStatus > .callAction .callButton.paddingleft {
+                    padding-left: 20px !important;
+                }
+                .phone > .bevel > .screen > .callStatus > .callAction .callButton.paddingright {
+                    padding-right: 20px !important;
+                }
+                .phone > .bevel > .screen > .callStatus > .callAction .callButton {
+                    font-size: 10px !important;
+                    width: 100%;
+                    height: 64px;
+                    padding: 0px !important;
+                    margin-top: 50px;
+                    background-color: transparent;
+                    color: #fff;
+                }
+                .phone > .bevel > .screen > .callStatus > .callAction .callButton.active.paddingright > i::before {
+                    content: '\f131' !important;
+                }
+                .phone > .bevel > .screen > .callStatus > .actions,
+                .phone > .bevel > .screen > .callStatus > .callAction > .actions {
+                    width: 100%;
+                    position: absolute;
+                    bottom: 40px;
+                    text-align: center;
+                }
+                    .phone > .bevel > .screen > .callStatus > .callAction > .actions .action,
+                    .phone > .bevel > .screen > .callStatus > .actions .action {
+                        border-radius: 128px;
+                        width: 52px;
+                        height: 52px;
+                        background-color: #dcdcdc;
+                        line-height: 49px;
+                        margin: 0 auto;
+                    }
+                    .phone > .bevel > .screen > .callStatus > .actions .action.answer {
+                        background-color: #088e00;
+                    }
+                    .phone > .bevel > .screen > .callStatus > .actions .action.answer:hover {
+                        background-color: #055f00;
+                    }
+                    .phone > .bevel > .screen > .callStatus > .callAction .action.reject,
+                    .phone > .bevel > .screen > .callStatus > .actions .action.reject {
+                        background-color: #8e0000 !important;
+                    }
+                    .phone > .bevel > .screen > .callStatus > .callAction .action.reject:hover,
+                    .phone > .bevel > .screen > .callStatus > .actions .action.reject:hover {
+                        background-color: #670000 !important;
+                    }
+                .phone > .bevel > .screen > .currentApp > .number {
+                    width: 100%;
+                    border-bottom: 1px solid #dcdcdc;
+                }
+                    .phone > .bevel > .screen > .currentApp > .number .diallingNumber {
+                        padding: 15px;
+                        margin-top: 15px;
+                        width: 100%;
+                        text-align: center;
+                        border: none;
+                        font-size: 20px;
+                    }
+                    .phone > .bevel > .screen > .currentApp > .dialPad {
+                        width: 100%;
+                        height: 100vh;
+                        margin-top: 15px;
+                    }
+                    .phone > .bevel > .screen > .currentApp > .dialPad .background:hover {
+                        background-color: #dadada;
+                    }
+                    .phone > .bevel > .screen > .currentApp > .dialPad .noBackground {
+                        background-color: transparent !important;
+                    }
+                    .phone > .bevel > .screen > .currentApp > .dialPad .background {
+                        background-color: #f7f7f7;
+                        height: 52px;
+                        width: 52px;
+                        text-align: center !important;
+                        border-radius: 128px;
+                        line-height: 52px;
+                        color: #000;
+                        margin: 6px 0px;
+                    }
+                    .phone > .bevel > .screen > .currentApp > .dialPad .background.call {
+                        background-color: #088e00 !important;
+                        color: #fff;
+                    }
+                .phone > .bevel > .screen > .currentApp > .title {
+                    width: 100%;
+                    text-align: center;
+                    padding: 10px;
+                    border-bottom: 1px solid #dcdcdc;
+                }
+                .phone > .bevel > .screen > .currentApp > .contactList {
+                    width: 100%;
+                    min-height: 200px;
+                    max-height: 455px;
+                    overflow-x: scroll;
+                }
+                    .phone > .bevel > .screen > .currentApp > .contactList > .contactSearchWrap {
+                        padding: 10px;
+                    }
+                        .phone > .bevel > .screen > .currentApp > .contactList > .contactSearchWrap > .contactSearch,
+                        .phone > .bevel > .screen > .currentApp > .viewer.messages > .newmessage > .writemessage {
+                            background-color: #dcdcdc;
+                            border: none;
+                            border-radius: 100px;
+                            width: 100%;
+                            padding: 0px 10px;
+                        }
+                        .phone > .bevel > .screen > .currentApp > .contactList > .contactSearchWrap > input.contactSearch::placeholder,
+                        .phone > .bevel > .screen > .currentApp > .viewer.messages > .newmessage > .writemessage::placeholder {
+                            color: #828282 !important;
+                        }
+                    .phone > .bevel > .screen > .currentApp > .contactList > .contact {
+                        width: 100%;
+                        height: 40px;
+                        border-bottom: 1px solid #dcdcdc;
+                        overflow: hidden;
+                    }
+                    .phone > .bevel > .screen > .currentApp > .contactList > .contact:hover {
+                        background-color: #dcdcdc;
+                    }
+                        .phone > .bevel > .screen > .currentApp > .contactList > .contact > .name {
+                            line-height: 40px;
+                            padding-left: 10px;
+                        }
+                            .phone > .bevel > .screen > .currentApp > .contactList > .contact > .name > .icon {
+                                float: right;
+                                padding-right: 10px;
+                                top: 2px;
+                                position: relative;
+                            }
+                            .phone > .bevel > .screen > .currentApp > .contactList > .contact > .name > .newMessage { 
+                                float: right;
+                                right: 10px;
+                                position: relative;
+                                color: #fff;
+                                background-color: #5c85fb;
+                                height: 20px;
+                                width: 25px;
+                                line-height: 18px;
+                                top: 12px;
+                                text-align: center;
+                                border-radius: 50px;
+                            }
+                .phone > .bevel > .screen > .currentApp > .options {
+                    width: fit-content;
+                    background-color: #f3f3f3 !important;
+                    height: 46px;
+                    padding: 10px;
+                    border-radius: 100px;
+                    position: absolute;
+                    bottom: 35px;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                    .phone > .bevel > .screen > .currentApp > .options > .option {
+                        float: left;
+                        text-align: center;
+                        font-size: 9px;
+                        padding: 1px 10px;
+                    }
+                        .phone > .bevel > .screen > .currentApp > .options > .option:hover {
+                            background-color: #dcdcdc;
+                            border-radius: 100px;
+                        }
+                    .phone > .bevel > .screen > .currentApp > .options > .option.record {
+                        display: none;
+                    }
+                    .phone > .bevel > .screen > .currentApp > .options.record > .option:not(.record) {
+                        display: none !important;
+                    }
+                    .phone > .bevel > .screen > .currentApp > .options.record > .option.record {
+                        display: block !important;
+                    }
+                        .phone > .bevel > .screen > .currentApp > .options > .option > i {
+                            padding-left: 2px;
+                        }
+                .phone > .bevel > .screen > .currentApp > .viewer {
+                    width: 100%;
+                    height: 100vh;
+                    background-color: #fff;;
+                    float: left;
+                    position: absolute;
+                    top: 0px;
+                    padding-top: 15px;
+                }
+                    .phone > .bevel > .screen > .currentApp > .viewer:not(.messages) > .name {
+                        padding: 10px;
+                        padding-bottom: 5px;
+                        font-size: 15px;
+                        height: 200px;
+                        background-color: #c8d9ff;
+                        position: absolute;
+                        width: 100%;
+                    }
+                    .phone > .bevel > .screen > .currentApp > .viewer.messages > .name {
+                        padding: 10px;
+                        padding-bottom: 5px;
+                        font-size: 15px;
+                        height: 40px;
+                        background-color: #fff;
+                        border-bottom: 1px solid #dcdcdc;
+                        position: absolute;
+                        width: 100%;
+                    }
+                        .phone > .bevel > .screen > .currentApp > .viewer.messages > .messages {
+                            margin-top: 40px;
+                            width: 100%;
+                            position: absolute;
+                        }
+                            .phone > .bevel > .screen > .currentApp > .viewer.messages > .messages > .message {
+                                width: 100%;
+                                min-height: 30px;
+                                height: auto;
+                                padding: 10px;
+                            }
+                                .phone > .bevel > .screen > .currentApp > .viewer.messages > .messages > .message > .inbound,
+                                .phone > .bevel > .screen > .currentApp > .viewer.messages > .messages > .message > .outbound {
+                                    font-size: 14px;
+                                    border-radius: 10px;
+                                    background-color: #dcdcdc;
+                                    width: fit-content;
+                                    float: left;
+                                    padding: 4px 10px;
+                                    margin-bottom: 10px;
+                                }
+                                .phone > .bevel > .screen > .currentApp > .viewer.messages > .messages > .message > .outbound {
+                                    float: right;
+                                    background-color: #2cc311;
+                                    color: #fff;
+                                }
+                                .phone > .bevel > .screen > .currentApp > .viewer.messages > .newmessage {
+                                    position: absolute;
+                                    bottom: 180px;
+                                    width: 100%;
+                                }
+                                    .phone > .bevel > .screen > .currentApp > .viewer.messages > .newmessage > .writemessage { 
+                                        width: 190px;
+                                        margin-left: 9px;
+                                    }
+                                    .phone > .bevel > .screen > .currentApp > .viewer.messages > .newmessage > .sendmessage {
+                                        border: none;
+                                        background-color: transparent;
+                                        color: #2cc311;
+                                    }
+                        .phone > .bevel > .screen > .currentApp > .viewer > .name > p {
+                            position: absolute;
+                            bottom: 10px;
+                        }
+                        .phone > .bevel > .screen > .currentApp > .viewer.messages > .name > p {
+                            bottom: -7px !important;
+                            width: 100%;
+                            text-align: center;
+                            left: 0px;
+                            pointer-events: none;
+                        }
+                    .phone > .bevel > .screen > .currentApp > .viewer > .number {
+                        position: absolute;
+                        top: 220px;
+                        padding: 10px 20px;
+                    }
+                        .phone > .bevel > .screen > .currentApp > .viewer > .number > .call {
+                            float: right;
+                            position: absolute;
+                            right: -80px;
+                            top: 10px;
+                        }
+            .phone > .bevel > .screen > .navigation.hide {
+                opacity: 0;
+                pointer-events: none;
+            }
+            .phone > .bevel > .screen > .navigation {
+                position: absolute;
+                padding: 8px 0px;
+                width: 100%;
+                z-index: 10;
+                bottom: 0px;
+                text-align: center;
+                color: #dcdcdc;
+                opacity: 1;
+                pointer-events: all;
+                -webkit-transition: opacity .3s;
+                transition: opacity .3s;
+                pointer-events: none;
+                left: 0px;
+            }
+            .phone > .bevel > .screen > .navigation > .homeButton {
+                background-color: transparent;
+                -webkit-transition: background-color 200ms linear;
+                transition: background-color 200ms linear;
+                width: 40px;
+                margin: 0 auto;
+                border-radius: 100px;
+                pointer-events: all !important;
+            }
+            .phone > .bevel > .screen > .navigation > .homeButton:hover {
+                background-color: #b3b3b36b;
+            }
+            .phone > .bevel > .screen > .apps {
+                padding-top: 54px;
+                position: absolute;
+            }
+            .phone > .bevel > .screen > .apps > .row {
+                padding: 0px;
+                width: 100%;
+                padding-right: 6px;
+            }
+            .phone > .bevel > .screen > .apps > .bottomRow {
+                position: absolute;
+                bottom: 0px;
+            }
+            .phone > .bevel > .screen > .apps .app {
+                color: #fff !important;
+                text-align: center;
+                height: 32px;
+                width: 32px;
+                line-height: 32px;
+                margin: 0 auto;
+                border-radius: 5px;
+            }
+            .phone > .bevel > .screen > .apps p {
+                color: #fff !important;
+                font-size: 9px;
+                text-align: center;
+                width: 100% !important;
+            }
+                .phone > .bevel > .screen > .apps .row > .col-md-3 {
+                    padding: 0px;
+                }
+                .phone > .bevel > .screen > .apps > .row.bottomRow .app[data-type="Dialler"] {
+                    background-color: #088e00;
+                }
+                .phone > .bevel > .screen > .apps > .row.bottomRow .app[data-type="Phonebook"] {
+                    background-color: #9e5800;
+                }
+                .phone > .bevel > .screen > .apps > .row.bottomRow .app[data-type="Messaging"] {
+                    background-color: #006d8e;
+                }
+                .phone > .bevel > .screen > .apps > .row.bottomRow .app[data-type="Settings"] {
+                    background-color: #8e0000;
+                }
+
+.voice {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    text-align: right;
+    padding: 5px 10px;
+    color: #ffffff4f;
+    pointer-events: none;
+}
+    .voice > .mic {
+        font-size: 30px;
+    }
+        .voice > .mic.active {
+            color: #a5d8a9 !important;
+        }
+    .voice > .talkingDistance {
+        font-size: 20px;
+        color: #ffffff4f;
+    }
+    .voice > .talkingDistance.active {
+        color: #a5d8a9 !important;
+    }
+    .voice > .talkingDistance.transition {
+        transition: color 1s;
+    }
+    .voice > .talkingDistance.fade { 
+        color: #ffffff4f !important;
+        opacity: 1 !important;
+    }
+    .voice.muted > .mic {
+        color: #df4343;
+    }
+.muted:not(.voice) {
+    position: absolute;
+    right: 60px;
+    top: 10px;
+    text-align: right;
+    pointer-events: none;
+    font-size: 20px;
+    color: #df4343;
+    font-weight: 700;
+    display: none;
+}
+.muted.show:not(.voice) {
+    display: block;
+}
+
+.money {
+    position: absolute;
+    right: 0px;
+    top: 90px;
+    text-align: right;
+    padding: 5px 10px;
+    /* color: #ffffff00; */
+    color: #000;
+    pointer-events: none;
+    font-size: 20px;
+    transition: all 1s;
+}
+    .money > .indicator,
+    .money > .amount {
+        float: left;
+        transition: all 1s;
+    }
+    .money > .indicator {
+        color: #20da1e69;
+    }
+    .money > .amount {
+        color: #71717169;
+    }
+    .money > .indicator.active {
+        color: #20da1e;
+    }
+    .money > .amount.active {
+        color: #717171;
+    }
+    .money > .amountChange {
+        color: #ffffff00;
+        opacity: 0;
+        transition: all 1s;
+    }
+    .money > .amountChange.add {
+        color: #20da1e;
+        opacity: 1;
+    }
+    .money > .amountChange.remove {
+        color: #da1d1d;
+        opacity: 1;
+    }
+        .money > .amountChange > .icon {
+            font-size: 13px;
+            position: relative;
+            top: -2px;
+        }
+.closeWindow {
+    background-color: #730a0a;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 27px;
+    z-index: 43623472347;
+}
+.closeWindow:hover {
+    background-color: #500707 !important;
+}
+
+.vehicleStore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    right: 20px;
+}
+    .vehicleStore > .selection {
+        position: absolute;
+        right: 0px;
+        height: 350px;
+        width: 240px;
+        background-color: #191919;
+    }
+        .vehicleStore > .selection > .search > input {
+            border: none;
+            padding-right: 30px;
+        }
+        .vehicleStore > .selection > .search > i {
+            color: #fff;
+            position: absolute;
+            top: 35px;
+            right: 10px;
+        }
+        .vehicleStore > .selection > .vehicleList {
+            height: 288px;
+            overflow-x: scroll;
+            padding: 0px 1px;
+        }
+        .vehicleStore > .selection > .title > img {
+            width: 100%;
+            padding: 10px 40px;
+        }
+        .vehicleStore > .selection > .vehicleList > .vehicle {
+            color: #fff !important;
+            font-family: Chalet-NewYorkSixty;
+            padding: 5px;
+            border-bottom: 1px solid #000;
+        }
+        .vehicleStore > .selection > .vehicleList > .vehicle.open {
+            background-color: #fff;
+            color: #000 !important;
+            padding-bottom: 20px;
+        }
+            .vehicleStore > .selection > .vehicleList > .vehicle > .bottom {
+                display: none;
+            }
+            .vehicleStore > .selection > .vehicleList > .vehicle.open > .bottom {
+                display: block;
+                margin-top: 8px;
+            }
+            .vehicleStore > .selection > .vehicleList > .vehicle > .bottom > .price {
+                text-align: left;
+                position: relative;
+                top: 5px;
+                color: #0a730a !important;
+            }
+            .vehicleStore > .selection > .vehicleList > .vehicle > .bottom > .actions {
+                text-align: right;
+                float: right;
+            }
+                .vehicleStore > .selection > .vehicleList > .vehicle > .bottom > .actions > .btn-buy,
+                .vehicleStore > .selection > .vehicleList > .vehicle > .bottom > .actions > .btn-view {
+                    color: #fff !important;
+                    font-size: 12px;
+                }
+                .vehicleStore > .selection > .vehicleList > .vehicle > .bottom > .actions > .btn-buy {
+                    background-color: #0a730a;
+                }
+                .vehicleStore > .selection > .vehicleList > .vehicle > .bottom > .actions > .btn-view {
+                    background-color: #0a5673;
+                }
+                .vehicleStore > .selection > .vehicleList > .vehicle > .bottom > .actions > .btn-buy:hover {
+                    background-color: #095d08 !important;
+                }
+                .vehicleStore > .selection > .vehicleList > .vehicle > .bottom > .actions > .btn-view:hover {
+                    background-color: #08455d !important;
+                }
+
+.radio {
+    float: right;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    padding: 10px;
+    height: 100vh;
+    width: 250px;
+    display: none;
+}
+.radio.open {
+    display: block;
+}
+    .radio button {
+        outline: none !important;
+        box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+    }
+    .radio > .buttons {
+        width: 100%;
+    }
+        .radio > .buttons > .ptt {
+            width: 5px;
+            height: 100px;
+            background-color: rgb(70, 70, 70);
+            position: absolute;
+            bottom: 260px;
+            left: 5px;
+            z-index: 1;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        .radio > .buttons > .panic {
+            width: 3px;
+            height: 20px;
+            background-color: rgb(173, 0, 0);
+            position: absolute;
+            bottom: 360px;
+            left: 190px;
+            z-index: 1;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    .radio > .unit {
+        background-color: #222222;
+        height: 420px;
+        width: 180px;
+        bottom: 0px;
+        margin: 0 auto;
+        position: absolute;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+        .radio > .unit > .buttons { 
+            width: 100%;
+        }
+            .radio > .unit > .buttons > .action {
+                width: 100%;
+                height: 35px;
+                padding-left: 16px
+            }
+                .radio > .unit > .buttons > .action > .btn {
+                    width: 27%;
+                    margin: 1px;
+                    padding: 0px;
+                }
+            
+            .radio > .unit > .buttons .btnRadio {
+                font-size: 10px !important;
+                width: 46.5%;
+                margin: 0 auto;
+                text-align: center;
+                color: #979797;
+                border: 1px solid #333333;
+                margin: 2px;
+            }
+            .radio > .unit > .buttons .btnRadio:hover {
+                background-color: #171616;
+            }
+                .radio > .unit > .buttons > .numpad > .row {
+                    margin: 0px !important;
+                }
+                    .radio > .unit > .buttons > .numpad > .row > .col-md-4 {
+                        width: 33.3333333333% !important;
+                        padding: 0px 12px;
+                    }
+                    .radio > .unit > .buttons > .numpad > .row > .col-md-4 {
+                        width: 33.3333333333% !important;
+                        padding: 0px 12px;
+                    }
+                        .radio > .unit > .buttons > .numpad > .row > .col-md-4 > .btnRadio {
+                            padding: 6px 5px;
+                            text-align: center;
+                            width: 100%;
+                        }
+        .radio > .unit > .speaker {
+            width: 100%;
+            padding: 10px;
+        }
+            .radio > .unit > .speaker > .line {
+                background-color: #333333;
+                width: 100%;
+                height: 6px;
+                position: relative;
+                margin: 10px 0px;
+            }
+        .radio > .unit > .screen {
+            color: #000;
+            width: 100%;
+            padding: 10px;
+            margin-top: -10px;
+        }
+            .radio > .unit > .screen > .freq {
+                padding: 10px;
+                text-align: center;
+                background-color: rgb(69, 121, 78);
+                border: none;
+                width: 100%;
+            }
+            .radio > .unit > .screen > .freq::selection {
+                background: rgb(55, 97, 62);
+                color: #fff;
+            }
+        .radio > .antenna > .connector,
+        .radio > .volume {
+            width: 35px;
+            height: 50px;
+            background-color: #222222;
+            position: absolute;
+            bottom: 420px;
+            right: 80px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+        .radio > .volume {
+            right: inherit !important;
+            left: 30px !important;
+            height: 30px;
+        }
+            .radio > .volume > .currentVolume > .volume {
+                width: 13px;
+                height: 31px;
+                padding: 0px;
+            }
+            .radio > .volume > .currentVolume > .volume.up {
+                float: left;
+                position: absolute;
+                right: 8px;
+                top: -2px;
+                border-top-right-radius: 10px !important;
+            }
+            .radio > .volume > .currentVolume > .volume.down {
+                float: right;
+                position: absolute;
+                left: -8px;
+                top: -2px;
+                border-top-left-radius: 10px !important;
+            }
+            .radio > .volume > .currentVolume {
+                color: rgb(209, 209, 209);
+                position: relative;
+                top: 2px;
+                left: 8px;
+                font-size: 10px;
+            }
+            .radio > .volume > .currentVolume.alt {
+                left: 6px !important;
+            }
+            .radio > .volume > .currentVolume.alt2 {
+                left: 9px !important;
+            }
+                .radio > .volume > .currentVolume > .fa {
+                    color: rgb(99, 99, 99);
+                }
+        .radio > .antenna > .stalk {
+            width: 25px;
+            height: 100px;
+            background-color: #222222;
+            position: absolute;
+            bottom: 460px;
+            right: 85px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }

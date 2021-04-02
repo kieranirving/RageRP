@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="del  /Q /S /F &quot;C:\RAGEMP\server-files\packages\*&quot;&#xD;&#xA;xcopy &quot;$(ProjectDir)*&quot; &quot;C:\RAGEMP\server-files\packages&quot; /Y /I /E /EXCLUDE:$(ProjectDir)exclude_copy.txt" />
+  </Target>
+
+</Project>

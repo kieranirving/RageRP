@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RageRP.Server", "RageRP\RageRP.Server.csproj", "{076A7A5D-B905-42F8-A6B0-207691840293}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RageRP.Client", "RageRP.Client\RageRP.Client.csproj", "{5A1E0AC1-7722-4564-B843-1C38FD346A88}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RageRP.Client.JS", "RageRP.Client.JS\RageRP.Client.JS.csproj", "{77EF96EB-EC3A-4867-9684-3662F6BF24A9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RageRP.Client.DLCPacks", "RageRP.Client.DLCPacks\RageRP.Client.DLCPacks.csproj", "{0D53E519-AC6B-43E8-935E-5208C5EB1975}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RageRP.Client.Rpf", "RageRP.Client.Rpf\RageRP.Client.Rpf.csproj", "{4D1F78A4-5294-4C91-BA12-3AB2EB36E9F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RageRP.Server.JS", "RageRP.Server.JS\RageRP.Server.JS.csproj", "{FEB566FD-75B6-46A4-B078-98BC4648405D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{076A7A5D-B905-42F8-A6B0-207691840293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{076A7A5D-B905-42F8-A6B0-207691840293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{076A7A5D-B905-42F8-A6B0-207691840293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{076A7A5D-B905-42F8-A6B0-207691840293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A1E0AC1-7722-4564-B843-1C38FD346A88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A1E0AC1-7722-4564-B843-1C38FD346A88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A1E0AC1-7722-4564-B843-1C38FD346A88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A1E0AC1-7722-4564-B843-1C38FD346A88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77EF96EB-EC3A-4867-9684-3662F6BF24A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77EF96EB-EC3A-4867-9684-3662F6BF24A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77EF96EB-EC3A-4867-9684-3662F6BF24A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77EF96EB-EC3A-4867-9684-3662F6BF24A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D53E519-AC6B-43E8-935E-5208C5EB1975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D53E519-AC6B-43E8-935E-5208C5EB1975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D53E519-AC6B-43E8-935E-5208C5EB1975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D53E519-AC6B-43E8-935E-5208C5EB1975}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D1F78A4-5294-4C91-BA12-3AB2EB36E9F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D1F78A4-5294-4C91-BA12-3AB2EB36E9F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D1F78A4-5294-4C91-BA12-3AB2EB36E9F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D1F78A4-5294-4C91-BA12-3AB2EB36E9F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEB566FD-75B6-46A4-B078-98BC4648405D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEB566FD-75B6-46A4-B078-98BC4648405D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEB566FD-75B6-46A4-B078-98BC4648405D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEB566FD-75B6-46A4-B078-98BC4648405D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CED40688-DC21-45ED-B87A-9FC941872CDF}
+	EndGlobalSection
+EndGlobal

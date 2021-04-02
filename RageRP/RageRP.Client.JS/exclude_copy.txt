@@ -1,0 +1,5 @@
+\bin\
+\obj\
+exclude_copy.txt
+RageRP.Client.JS.csproj
+RageRP.Client.JS.csproj.user

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+</head>
+<body class="font">
+    <div class="phone">
+        <div class="buttons">
+            <div class="volume">
+                <div class="up"></div>
+                <div class="down"></div>
+            </div>
+            <div class="lock"></div>
+        </div>
+        <div class="bevel">
+            <div class="screen">
+                <div class="notch"><div class="circle"></div></div>
+                <div class="notificationBar">
+                    <div class="return">
+                        <i class="fa fa-chevron-left"></i> Return to call
+                    </div>
+                    <div class="network">
+                        <i class="fa fa-satellite-dish"></i> 5G
+                    </div>
+                    <div class="time">00:00</div>
+                    <div class="battery">
+                        <i class="fa fa-battery-full"></i>
+                    </div>
+                </div>
+                <div class="callStatus">
+                    <div class="caller">
+                        
+                    </div>
+                    <div class="callerNumber">
+                        
+                    </div>
+                    <div class="callTimer" hidden>
+                        <span class="callMinutes">00</span>:<span class="callSeconds">00</span>
+                    </div>
+                    <div class="callAction" hidden>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="callButton addrBtn btn btn-default paddingleft">
+                                    <i class="fa fa-address-book"></i>
+                                    <br>
+                                    Add to Contacts
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="callButton muteBtn btn btn-default paddingright">
+                                    <i class="fa fa-microphone"></i>
+                                    <br>
+                                    Mute
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row actions">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                <div class="action reject">
+                                    <i class="fa fa-phone-slash"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="action answer">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="action reject">
+                                    <i class="fa fa-phone-slash"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="currentApp">
+                    
+                </div>
+                <div class="apps">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="app" data-type="MailAds">
+                                <div class="icon">
+                                    <i class="fa fa-mail-bulk" style="color: #00668e;z-index: 1;position: relative;">
+                                    <span class="background" style="width: 2px;height: 2px;background-color: #fff;position: absolute;left: 14px;top: 7px;z-index: -1;"></span>
+                                    <span class="background" style="width: 12px;height: 12px;background-color: #fff;position: absolute;left: 2px;top: 1px;z-index: -1;"></span>
+                                    <span class="background" style="width: 10px;height: 6px;background-color: #fff;position: absolute;left: 0px;top: 9px;z-index: -1;"></span></i>
+                                </div>
+                            </div>
+                            <p>Mail</p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="app" data-type="Banking">
+                                <div class="icon">
+                                    <i class="fa fa-money-bill-alt" style="color: #088e00;z-index: 1;position: relative;">
+                                        <span class="background" style="width: 18px;height: 10px;background-color: #fff;position: absolute;left: 1px;top: 3px;z-index: -1;"></span>
+                                    </i>
+                                </div>
+                            </div>
+                            <p>Banking</p>
+                        </div>
+                        <div class="col-md-3">
+                            
+                        </div>
+                        <div class="col-md-3">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-3">
+                            
+                        </div>
+                        <div class="col-md-3">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-3">
+                            
+                        </div>
+                        <div class="col-md-3">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-3">
+                            
+                        </div>
+                        <div class="col-md-3">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-3">
+                            
+                        </div>
+                        <div class="col-md-3">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-3">
+                            
+                        </div>
+                        <div class="col-md-3">
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="row bottomRow">
+                        <div class="col-md-3">
+                            <div class="app" data-type="Dialler">
+                                <div class="icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                            </div>
+                            <p>Dialler</p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="app" data-type="Phonebook">
+                                <div class="icon">
+                                    <i class="fa fa-address-book"></i>
+                                </div>
+                            </div>
+                            <p>Phonebook</p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="app" data-type="Messaging">
+                                <div class="icon">
+                                    <i class="fa fa-comment"></i>
+                                </div>
+                            </div>
+                            <p>Messaging</p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="app" data-type="Settings">
+                                <div class="icon">
+                                    <i class="fa fa-cog" style="color: #fff;z-index: 1;position: relative;">
+                                        <span class="background" style="width: 6px;height: 6px;background-color: #000000;position: absolute;left: 5px;top: 6px;z-index: -1;"></span>
+                                    </i>
+                                </div>
+                            </div>
+                            <p>Settings</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <div class="homeButton">
+                        <i class="far fa-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/prototypes.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/phone.js"></script>
+</html>
